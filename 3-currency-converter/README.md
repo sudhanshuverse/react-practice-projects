@@ -5,7 +5,7 @@ Enter an amount, choose the currencies to convert **from** and **to**, and insta
 
 ## 🔗 Live Demo
 <!-- Replace this URL with your own deployed link -->
-https://your-username.github.io/react-practice-projects/3-currency-converter/
+https://sudhanshuverse.github.io/react-practice-projects/3-currency-converter/
 
 ## 📸 Screenshot
 ![Currency Converter Screenshot](./public/screenshot/currency-converter.png)
