@@ -1,6 +1,6 @@
 import './style.css';
 
-import reloadImg from '../public/assets/reload.svg'
+import reloadImg from '/assets/reload.svg'
 import { useState } from 'react';
 
 function App() {
