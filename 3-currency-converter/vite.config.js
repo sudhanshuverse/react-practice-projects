@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/react-practice-projects/2-BMI-calculator/',
+  base: '/react-practice-projects/3-currency-converter',
 })
