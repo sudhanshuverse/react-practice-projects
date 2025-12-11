@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>React Practice Projects — Links</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --primary-dark: #1e61ce;
+            --bg-grad: linear-gradient(140deg, #000, #00072e);
+            --text: #e8eaed;
+            --muted: #b0b0b0;
+            --border: #333;
+            --radius: 12px;
+            --shadow: 0 6px 20px rgba(0, 0, 0, .6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Roboto', Arial, system-ui;
+            background: var(--bg-grad);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 980px;
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01));
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, .03);
+            overflow: hidden;
+        }
+
+        /* HEADER ROW */
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 18px 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, .04);
+            background: linear-gradient(180deg, rgba(30, 30, 30, .95), rgba(24, 24, 24, .95));
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex: 0 0 auto
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(66, 133, 244, .18);
+            flex-shrink: 0;
+        }
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+
+        .repo-title {
+            font-weight: 700;
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--muted);
+            max-width: 100%;
+            margin-top: 4px;
+            /* short subtitle */
+        }
+
+        .meta-block {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            flex: 0 0 auto;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            padding: 20px;
+            background: linear-gradient(180deg, rgba(30, 30, 30, .6), rgba(18, 18, 18, .6));
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 12px 0;
+            font-weight: 500
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .01), transparent);
+            border: 1px solid rgba(255, 255, 255, .03);
+            transition: transform .18s ease, box-shadow .18s ease;
+            gap: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(2, 6, 23, .6);
+            background: rgba(255, 255, 255, .02)
+        }
+
+        .link-left {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            min-width: 0;
+            flex: 1 1 auto
+        }
+
+        .bullet {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(66, 133, 244, .12), rgba(30, 30, 30, .08));
+            color: var(--primary-color);
+            font-weight: 700;
+            border: 1px solid rgba(66, 133, 244, .06);
+            flex-shrink: 0
+        }
+
+        .link-info {
+            min-width: 0;
+            overflow: visible
+        }
+
+        .link-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            overflow-wrap: anywhere
+        }
+
+        .link-sub {
+            font-size: 13px;
+            color: var(--muted);
+            overflow-wrap: anywhere;
+            word-break: break-word
+        }
+
+        .link-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: 12px;
+            flex-shrink: 0
+        }
+
+        .open-btn {
+            padding: 8px 12px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            box-shadow: 0 8px 20px rgba(66, 133, 244, .18)
+        }
+
+        /* no copy buttons, JS removed */
+
+        /* Responsiveness */
+        @media (max-width:880px) {
+            .repo-title {
+                font-size: 16px
+            }
+
+            .header-row {
+                padding: 14px;
+                gap: 12px
+            }
+        }
+
+        @media (max-width:640px) {
+
+            /* header stacks vertically */
+            .header-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px
+            }
+
+            .meta-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-between
+            }
+
+            /* cards become stacked rows */
+            .card {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .link-actions {
+                width: 100%;
+                justify-content: flex-end
+            }
+
+            .open-btn {
+                width: 100%;
+                text-align: center
+            }
+
+            .link-title {
+                font-size: 15px
+            }
+
+            .link-sub {
+                font-size: 13px
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header-row">
+            <div class="logo">
+                <div class="icon">RP</div>
+            </div>
+            <div class="title-block">
+                <div class="repo-title">react-practice-projects</div>
+                <div class="subtitle">A greenhouse of tiny React apps</div>
+            </div>
+            <div class="meta-block">
+                <div class="owner">Owner: <strong style="color:var(--text);margin-left:6px">sudhanshuverse</strong></div>
+                <div class="note">Click the button to open a project in a new tab.</div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Live project links</h1>
+            <div class="list">
+                <!-- Item 1 -->
+                <div class="card">
+                    <div class="link-left">
+                        <div class="bullet">1</div>
+                        <div class="link-info">
+                            <div class="link-title">1 — Counter</div>
+                            <div class="link-sub">https://sudhanshuverse.github.io/react-practice-projects/1-counter/</div>
+                        </div>
+                    </div>
+                    <div class="link-actions">
+                        <a class="open-btn" href="https://sudhanshuverse.github.io/react-practice-projects/1-counter/" target="_blank" rel="noopener">Open</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="card">
+                    <div class="link-left">
+                        <div class="bullet">2</div>
+                        <div class="link-info">
+                            <div class="link-title">2 — BMI Calculator</div>
+                            <div class="link-sub">https://sudhanshuverse.github.io/react-practice-projects/2-BMI-calculator/</div>
+                        </div>
+                    </div>
+                    <div class="link-actions">
+                        <a class="open-btn" href="https://sudhanshuverse.github.io/react-practice-projects/2-BMI-calculator/" target="_blank" rel="noopener">Open</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="card">
+                    <div class="link-left">
+                        <div class="bullet">3</div>
+                        <div class="link-info">
+                            <div class="link-title">3 — Currency Converter</div>
+                            <div class="link-sub">https://sudhanshuverse.github.io/react-practice-projects/3-currency-converter/</div>
+                        </div>
+                    </div>
+                    <div class="link-actions">
+                        <a class="open-btn" href="https://sudhanshuverse.github.io/react-practice-projects/3-currency-converter/" target="_blank" rel="noopener">Open</a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="card">
+                    <div class="link-left">
+                        <div class="bullet">4</div>
+                        <div class="link-info">
+                            <div class="link-title">4 — Weather App</div>
+                            <div class="link-sub">https://sudhanshuverse.github.io/react-practice-projects/4-weather-app/</div>
+                        </div>
+                    </div>
+                    <div class="link-actions">
+                        <a class="open-btn" href="https://sudhanshuverse.github.io/react-practice-projects/4-weather-app/" target="_blank" rel="noopener">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
