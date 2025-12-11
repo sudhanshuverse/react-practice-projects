@@ -1,0 +1,12 @@
+# Weather App ⛅
+
+A simple weather checking app built with **React** and **Vite**.  
+Search for any city and instantly view the current temperature and weather conditions.
+
+## 🔗 Live Demo
+<!-- Replace this URL with your own deployed link -->
+https://sudhanshuverse.github.io/react-practice-projects/4-currency-converter/
+
+
+## 📸 Screenshot
+![Weather App Screenshot](./public/screenshot/screenshot.png)
