@@ -7,7 +7,7 @@ const API_KEY = '8cfff37a35a38f4c2f527222d73a235a';
 
 export default function App() {
   const [weather, setWeather] = useState(null); 
-  const [place, setPlace] = useState('Tokio');  
+  const [place, setPlace] = useState('Tokyo');  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
