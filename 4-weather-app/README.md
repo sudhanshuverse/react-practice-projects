@@ -5,7 +5,7 @@ Search for any city and instantly view the current temperature and weather condi
 
 ## 🔗 Live Demo
 <!-- Replace this URL with your own deployed link -->
-https://sudhanshuverse.github.io/react-practice-projects/4-currency-converter/
+https://sudhanshuverse.github.io/react-practice-projects/4-weather-app/
 
 
 ## 📸 Screenshot
