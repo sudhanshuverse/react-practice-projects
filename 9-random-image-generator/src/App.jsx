@@ -1,31 +1,24 @@
+import { useState } from "react"
 import "./App.css"
 
 function App() {
-  const reload = () => {
-    window.location.reload()
+  const [bg, setBg] = useState(
+    `https://picsum.photos/1000/400?random=${Math.random()}`
+  )
+
+  const changeImage = () => {
+    setBg(`https://picsum.photos/1000/400?random=${Math.random()}`)
   }
+
   return (
     <div className="main-container">
-      <header>
-        <nav>
-          <div className="left">
-            <h1>Xplore</h1>
-          </div>
-          <div className="right">
-            <a href="">Travel Guide</a>
-            <a href="">Famous Places</a>
-            <a href="">Contact Us</a>
-            <button>Booking</button>
-          </div>
-        </nav>
-      </header>
-      <main>
+      <main style={{ backgroundImage: `url(${bg})` }}>
         <div className="hero-section">
-            <button onClick={reload}>Change Image</button>
+          <button onClick={changeImage}>Change Image</button>
         </div>
       </main>
     </div>
   )
 }
 
-export default App;
+export default App
