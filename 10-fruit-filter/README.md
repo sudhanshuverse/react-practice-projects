@@ -8,10 +8,3 @@ https://sudhanshuverse.github.io/react-practice-projects/10-fruit-filter/
 ## 📸 Screenshot
 ![App Screenshot](./public/screenshot/screenshot.png)
 
-## 🛠 Tech Stack
-- React
-- Vite
-- JavaScript
-- CSS
-
-⭐ Star the repo if you like it!
